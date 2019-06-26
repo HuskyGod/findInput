@@ -1,3 +1,5 @@
-export default function () {
-    console.log('111')
+export default function ({mock}) {
+    mock( '/api/findList', 'get', function( options ) {
+        console.log('options', options)
+    })
 }

@@ -1,4 +1,4 @@
-import MockJs from 'mockjs';
+import Mock from 'mockjs';
 
 const moduleList = [
     './list'
@@ -6,8 +6,11 @@ const moduleList = [
 
 export default function (bool) {
     if (bool) {
+        Mock.setup({
+            timeout: 400
+        })
         moduleList.map(url => {
-            return require(url).default()
+            return require(`${url}.js`).default(Mock)
         })
     }
 }
