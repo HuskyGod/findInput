@@ -133,5 +133,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "husky": "^2.6.0",
+    "lint-staged": "^8.2.1"
   }
 }
